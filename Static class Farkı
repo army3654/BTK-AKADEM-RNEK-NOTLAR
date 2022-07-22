@@ -1,0 +1,31 @@
+ // STATİC CLASS VE STATİC OLMAYAN CLASS FARKI 
+Teacher.Number = 10; // 1 numara 
+Utilities.Validate(); // 1 numara 
+manager manager = new manager(); 
+manager.DoSomething(); 
+
+manager.DoSomething2();
+Console.ReadLine();
+static class Teacher // 1 numara 
+{
+    public static int Number { get; set; }
+
+}
+static class Utilities // 2 numara 
+{
+    public static void Validate()
+    {
+        Console.WriteLine("validation is done");
+    }
+}
+class manager // Dikkat et class static değil. 
+{
+    public static void DoSomething()
+    {
+        Console.WriteLine("done!");
+    }
+    public void DoSomething2()
+        {
+        Console.WriteLine("done2");
+    }
+}
