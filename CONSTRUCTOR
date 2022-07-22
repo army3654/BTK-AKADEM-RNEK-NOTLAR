@@ -1,29 +1,38 @@
-interface Ilogger
+//YENİ ÖRNEK
+EmployeeManager EmployeeManager = new EmployeeManager(new DataBaseLogger()); // 8-işlem yapacağımız class newlendi ve içinde databaselogger kullanacağımız söylendi.
+EmployeeManager.add();
+Console.ReadLine();  
+interface Ilogger // 1- class içinde kullanmak için bir interface yazdık.
 {
     void log();
 }
 
-class DataBaseLogger : Ilogger
+class DataBaseLogger : Ilogger // 2- database adında interface kullanarak bir class yazdık.
 {
     public void log()
     {
-        Console.WriteLine(" logged to database"); //1
+        Console.WriteLine(" logged to database"); 
     }
 }
 
-class FileLogger : Ilogger
+class FileLogger : Ilogger // 3- filelogger adında yeni bir class daha yazdık.
 {
     public void log()
     {
         Console.WriteLine(" logged to File");
     }
 }
-class EmployeeManager
+class EmployeeManager // 4- yeni bir class, 
 {
-    public Ilogger logger { get; set; }
+    private Ilogger _logger;
+    public EmployeeManager(Ilogger logger) // 5- ctor tab tab diyerek constructor kullandık
+    {
+        _logger = logger; // 6- ctor ile gelen kalıp
+    }
+
     public void add()
     {
-       logger.log();
-        Console.WriteLine("added"); //2
+       _logger.log(); // 7- kalıp 
+        Console.WriteLine("added"); 
     }
 }
