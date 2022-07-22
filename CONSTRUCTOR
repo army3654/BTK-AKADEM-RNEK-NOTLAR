@@ -1,0 +1,29 @@
+interface Ilogger
+{
+    void log();
+}
+
+class DataBaseLogger : Ilogger
+{
+    public void log()
+    {
+        Console.WriteLine(" logged to database"); //1
+    }
+}
+
+class FileLogger : Ilogger
+{
+    public void log()
+    {
+        Console.WriteLine(" logged to File");
+    }
+}
+class EmployeeManager
+{
+    public Ilogger logger { get; set; }
+    public void add()
+    {
+       logger.log();
+        Console.WriteLine("added"); //2
+    }
+}
