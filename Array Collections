@@ -1,0 +1,14 @@
+using System.Collections;
+
+ArrayList cities = new ArrayList();
+cities.Add("ankara");
+cities.Add("edana");
+
+cities.Add("kars");
+cities.Add("mersim");
+Console.WriteLine(cities[2]);
+foreach (var i in cities)
+{
+    Console.WriteLine(i);
+}
+Console.ReadLine();
