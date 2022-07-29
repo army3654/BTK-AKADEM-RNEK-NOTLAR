@@ -1,0 +1,22 @@
+List<string> cities = new List<string>();
+List<customer> customers = new List<customer>();
+customers.Add(new customer { Id=13213, FirstName="Armağan "});
+customers.Add(new customer { Id = 654654, FirstName = "subutay ilgar" });
+customers.Add(new customer { Id = 897464, FirstName = " Aygül İlgar" });
+foreach (var customer in customers)
+{
+    Console.WriteLine(customer.FirstName);
+}
+cities.Add("kars");
+cities.Add("istanbul");
+foreach (var c in cities)
+{
+    Console.WriteLine(c);
+}
+Console.ReadLine();
+
+class customer
+{
+    public string FirstName { get; set; }
+    public int Id { get; set; }
+}
