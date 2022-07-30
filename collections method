@@ -1,0 +1,30 @@
+List<customer> customers = new List<customer>(); // 2 numaralı iş.
+customers.Add(new customer { Id = 13213, FirstName = "Armağan " });
+customers.Add(new customer { Id = 654654, FirstName = "subutay ilgar" });
+customers.Add(new customer { Id = 897464, FirstName = " Aygül İlgar" });
+var customer2 = new customer // 2nin farklı bir yazım şekli 
+{
+    Id = 3,
+    FirstName = "Ezgi ilgar"
+};
+
+customers.AddRange(new customer[2] //3-Var olan listeye yeni bir eleman eklememiz gerekirse bunu kullanacağız.
+{
+    new customer{ Id= 4, FirstName ="ilgar"},
+    new customer{ Id = 5, FirstName = "asdfg"}
+});
+
+var count  = customers.Count; //Koleksiyonun kaç elemanlı olduğunu saydırdık.
+
+Console.WriteLine(count); // koleksiyonun kaç elemanlı olduğunu yazdırdık.
+
+foreach (var customer in customers)
+
+{
+    Console.WriteLine(customer.FirstName);
+}
+class customer // 1 numaralı iş 
+{
+    public string FirstName { get; set; }
+    public int Id { get; set; }
+}
