@@ -1,0 +1,30 @@
+
+// Hata yakalamak için try yazıp 2 defa TAB'e basıyoruz ve aşşağıdaki kısım açılıyor.
+try //try içine başarılı olursa, bir hata olmazsa çalışacak olan kod yazılır. 
+{
+    string[] students = new string[3]
+{"engim", "salih", "armağan"};
+    students[3] = "armii";
+
+}
+catch (Exception) // bir hata olursa çalışacak olan kodları yazdığımız kısım 
+{
+
+    Console.WriteLine("bir hata var");
+}
+
+
+// bir diğer kullanım türü:
+
+try 
+{
+    string[] students = new string[3]
+{"engim", "salih", "armağan"};
+    students[3] = "armii";
+
+}
+catch (Exception exception)  
+{
+
+    Console.WriteLine(exception.Message);
+}
