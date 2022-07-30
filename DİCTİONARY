@@ -1,0 +1,21 @@
+Dictionary<string, string> dictionary = new Dictionary<string, string>();
+dictionary.Add("book", "kitap");// book key, kitap value 
+dictionary.Add("table", "tablo");
+dictionary.Add("computer", "bilgisayar");
+Console.WriteLine(dictionary["table"]);
+
+foreach (var i in dictionary) // keyleri dolaştık
+{
+    Console.WriteLine(i.Key);
+}
+Console.WriteLine("burada ayrılıyoruz");
+foreach (var i in dictionary) // valueleri dolaştık
+{
+    Console.WriteLine(i.Value);
+}
+
+
+dictionary.ContainsKey("glass"); // tam olarak karşılığı sende glass var mı diye sorduk konsolda false yazacak.
+Console.WriteLine(dictionary.ContainsKey("glass"));
+
+Console.WriteLine(dictionary.ContainsKey("table")); // sende table var mı diye sorduk, true yazacak.
